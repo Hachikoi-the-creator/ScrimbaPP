@@ -54,7 +54,7 @@ const M5Projects = [
     id: 53,
     name: "Dice Game",
     images: ["img/thumbnails/module5-dice-game.png"],
-    url: "module-5/DiceGame/main.htm",
+    url: "module-5/DiceGame/index.html",
   },
   {
     id: 54,
