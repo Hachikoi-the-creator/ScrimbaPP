@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/8koi-svg.svg" />
+    <title>Document</title>
+    <script src="app.js" defer></script>
+  </head>
+  <style>
+    *,
+    ::after,
+    ::before {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --black: #252525;
+      --red: #d9303082;
+      /* --hover-green: rgb(2, 114, 2); */
+      --white: #fefefe;
+    }
+
+    body {
+      text-align: center;
+      background-color: cornflowerblue;
+      color: var(--white);
+    }
+
+    a {
+      color: antiquewhite;
+      text-decoration: none;
+      display: inline-block;
+      padding: 10px 25px;
+      background-color: var(--black);
+      border-radius: 50vw;
+    }
+
+    a:hover,
+    a:active {
+      color: rgb(215, 250, 238);
+    }
+
+    h1 {
+      margin-top: 20%;
+    }
+
+    h1,
+    h2 {
+      padding: 20px;
+    }
+
+    /* Modal styles */
+    .modal {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--red);
+      display: none;
+      z-index: 10;
+
+    }
+
+    .modal--content {
+      position: absolute;
+      top: 25%;
+      left: 35%;
+      color: #252525;
+      background-color: #f8b6b6;
+      padding: 20px;
+      border-radius: 7px;
+    }
+  </style>
+
+  <body>
+    <h1>This is not a modal</h1>
+    <a href="#" class="open-modal-btn">Click to see my modal!</a>
+    <!-- Modal -->
+    <div class="modal">
+      <div class="modal--content">
+        <h2>This is the real modal</h2>
+        <a href="#" class="close-modal-btn">Close the modal</a>
+      </div>
+    </div>
+  </body>
+
+</html>

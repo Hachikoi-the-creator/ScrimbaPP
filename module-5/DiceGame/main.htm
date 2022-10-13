@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="description" content="Cool and simple dice game">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./syles.css">
+    <link rel="stylesheet" href="./fireworks.css">
+    <script src="./app.js" defer></script>
+    <link rel="icon" type="image/svg+xml" href="/8koi-svg.svg" />
+    <title>Dice Game</title>
+  </head>
+
+  <body>
+    <main class="container">
+      <h1 id="message">Player 1 Turn</h1>
+      <div class="players">
+        <div id="player1">
+          <h1>Score:
+            <span id="player1Scoreboard">0</span>
+          </h1>
+          <div id="player1Dice" class="dice active">-</div>
+        </div>
+        <div id="player2">
+          <h1>Score:
+            <span id="player2Scoreboard">0</span>
+          </h1>
+          <div id="player2Dice" class="dice">-</div>
+        </div>
+      </div>
+
+      <button id="rollBtn">Roll Dice 🎲</button>
+      <button id="resetBtn">Reset Game 🔁</button>
+    </main>
+    <div class="fireworks">
+      <div class="pyro">
+        <div class="before"></div>
+        <div class="after"></div>
+      </div>
+    </div>
+  </body>
+
+</html>

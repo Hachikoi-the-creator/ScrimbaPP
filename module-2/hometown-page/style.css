@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap");
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --deep-brick: rgba(103, 2, 2, 0.681);
+  --clear-brick: rgba(205, 11, 11, 0.787);
+  --bottom: rgb(151, 59, 116);
+  --main-bg: rgb(255, 205, 130);
+}
+
+body {
+  font-family: "Roboto Flex", sans-serif;
+  text-align: center;
+}
+
+/*---*/
+/* HERO SECTION */
+/*---*/
+.hero {
+  height: 400px;
+  color: rgb(203, 205, 207);
+  text-shadow: 2px 2px black;
+  background-image: url("./img/jesus.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.hero h1,
+.hero h2 {
+  padding: 3px;
+  border-radius: 7px;
+}
+
+.hero h1 {
+  width: fit-content;
+  background-color: var(--deep-brick);
+}
+
+.hero h2 {
+  background-color: var(--clear-brick);
+}
+
+/*---*/
+/* ACTIVITIES */
+/*---*/
+.main {
+  background-color: var(--main-bg);
+  padding-bottom: 30px;
+}
+
+.main h2 {
+  padding: 30px 0;
+}
+
+.main--container {
+  display: flex;
+}
+
+.main--container > * {
+  padding: 20px;
+}
+
+.main--container h3 {
+  padding: 10px;
+}
+
+.activity img {
+  width: 120px;
+  aspect-ratio: 1/1;
+  border-radius: 50vw;
+}
+
+/*---*/
+/* BOTTOM SECTION */
+/*---*/
+.last-sec {
+  margin: 30px;
+}
+
+.last--container {
+  width: 60%;
+  min-width: 300px;
+  margin: 0 auto;
+  background-color: var(--bottom);
+  display: flex;
+  border: 20px solid var(--bottom);
+  border-radius: 7px;
+}
+
+.last--container img {
+  width: 100%;
+  border-radius: 7px;
+}
+
+.last-sec .desc > * {
+  text-shadow: 0px 0px 2px white;
+  border-radius: 7px;
+  padding: 10px;
+}

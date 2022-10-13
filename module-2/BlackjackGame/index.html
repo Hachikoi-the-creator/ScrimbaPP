@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/svg+xml" href="/8koi-svg.svg" />
+        <title>Pseudo-Blackjack</title>
+    </head>
+
+    <body>
+        <h1>Blackjack</h1>
+
+        <p id="message_top">Want to play a round?</p>
+        <div class="wrapper">
+            <div class="column_container">
+
+                <div class="column1">
+                    <h2>Player</h2>
+                    <p id="cards_show">Cards:</p>
+                    <p id="sum_show">Sum:</p>
+                    <p id="player_obj"></p>
+                </div>
+
+                <div class="column2">
+                    <h2>House</h2>
+                    <p id="cards_show2">Cards:</p>
+                    <p id="sum_show2">Sum:</p>
+                    <p id="player_obj2"></p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- column_cotainer END -->
+        <!-- wrapper END -->
+
+
+        <button onclick="startGame()">START GAME</button>
+        <button onclick="anotherCard()">ANOTHER CARD</button>
+        <br><!-- hack for spaces lol -->
+        <button onclick="standFunc()">STAND!</button>
+
+        <script src="app.js"></script>
+
+    </body>
+
+</html>

@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <link rel="icon" type="image/svg+xml" href="/8koi-svg.svg" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&family=Black+Ops+One&family=Creepster&family=La+Belle+Aurore&family=MedievalSharp&family=Orbitron&family=Rye&display=swap"
+      rel="stylesheet">
+  </head>
+  <style>
+    :root {
+      --superhero: 'Bangers', cursive;
+      --fantasy: 'MedievalSharp', cursive;
+      --space: 'Orbitron', sans-serif;
+      --military: 'Black Ops One', cursive;
+      --romantic: 'La Belle Aurore', cursive;
+      --scary: 'Creepster', cursive;
+      --cowboy: 'Rye', cursive;
+      --regular: sans-serif;
+      --fantasy: 'MedievalSharp', cursive;
+      --font: var(--regular);
+      --sharp: 0;
+      --soft: 10px;
+      --round: 100px;
+
+      --image: var(--soft);
+
+      --background: #f5f5f5;
+      --text: #222222;
+
+      --light: var(--background);
+      --dark: var(--text);
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    body,
+    html {
+      margin: 0;
+      padding: 10px;
+      background: var(--background);
+      color: var(--text);
+      font-family: var(--font);
+    }
+
+    img {
+      width: 30%;
+      border-radius: calc(var(--image) * 2);
+      border: 4px solid var(--text);
+    }
+
+    a {
+      color: var(--text);
+    }
+
+    input {
+      display: block;
+      margin: 20px 0 0;
+      width: 160px;
+      box-sizing: border-box;
+      padding: 4px 8px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: var(--text);
+      color: var(--text);
+      background: none;
+      border-radius: var(--image);
+      font-family: var(--font);
+    }
+
+    ::placeholder {
+      color: var(--text);
+    }
+
+    button {
+      border-radius: var(--image);
+      padding: 5px 10px;
+      border: none;
+      background: var(--text);
+      color: var(--background);
+      font-weight: bold;
+      box-sizing: border-box;
+      display: block;
+      margin: 8px 0;
+      cursor: pointer;
+      font-family: var(--font);
+      width: 160px;
+    }
+  </style>
+
+  <body>
+    <img src="../module-2/CryptoPageChallenge/img/shinobu.jpg">
+    <h1>Hi, my name is Alice</h1>
+    <h2>Fun facts about me:</h2>
+    <ul>
+      <li>22 years old</li>
+      <li>Live in Mexico</li>
+      <li>Code in bed</li>
+    </ul>
+    <p>Please connect with me on <a href="https://www.linkedin.com/in/adan-moreno-7/" taget="_blank">LinkedIn
+        here.</a></p>
+    <input type="text" placeholder="Enter email...">
+    <button>Join newsletter</button>
+  </body>
+
+  <script>
+    // Challenge 2:
+    // Replace the arguments below according to your preference.
+
+    // space, scary, military, romantic, cowboy, fantasy, superhero
+    favouriteMovieGenre("fantasy");
+
+    // watermelon, tomato, banana, orange, avocado, blueberry
+    favouriteFruit("banana");
+
+    // light, dark
+    favouriteMode("dark");
+
+    // sharp, soft, round
+    favouriteEdgeStyle("round");
+
+
+
+    ////////////////////////////////////
+    // IGNORE THE CODE BELOW THIS LINE //
+    ////////////////////////////////////
+
+    function setProp(prop, value) {
+      document.documentElement.style.setProperty(prop, value);
+    }
+
+    function favouriteEdgeStyle(style) {
+      setProp("--image", "var(--" + style + ")");
+    }
+
+    function favouriteMovieGenre(font) {
+      if (font) {
+        setProp("--font", "var(--" + font + ")");
+      }
+    }
+
+    function favouriteMode(mode) {
+      if (mode === "light" || !mode) {
+        setProp('--background', "var(--light)");
+        setProp('--text', "var(--dark)");
+      } else if (mode === "dark") {
+        setProp('--background', "var(--dark)");
+        setProp('--text', "var(--light)");
+      }
+    }
+
+    function favouriteFruit(theme) {
+      switch (theme) {
+        case "pastel":
+          setProp('--light', "#f2f6c3");
+          setProp('--dark', "#68c4af");
+          break;
+        case "muted":
+          setProp('--light', "#4c5b64");
+          setProp('--dark', "#45241c");
+          break;
+        case "love":
+          setProp('--light', "#f06836");
+          setProp('--dark', "#ba0001");
+          break;
+        case "sky":
+          setProp('--light', "#99ccff");
+          setProp('--dark', "#3366ff");
+          break;
+        case "forrest":
+          setProp('--light', "#91B247");
+          setProp('--dark', "#597C2B");
+          break;
+        case "shiny":
+          setProp('--light', "#2e9afe");
+          setProp('--dark', "#02197c");
+          break;
+        case "banana":
+          setProp('--light', "#fbec5d");
+          setProp('--dark', "#6b3e26");
+          break;
+        case "watermelon":
+          setProp('--light', "#75b855");
+          setProp('--dark', "#ad3838");
+          break;
+        case "tomato":
+          setProp('--light', "#d62e2e");
+          setProp('--dark', "#600000");
+          break;
+        case "avocado":
+          setProp('--light', "#6b8c21");
+          setProp('--dark', "#704012");
+          break;
+        case "orange":
+          setProp('--light', "#ffca16");
+          setProp('--dark', "#f97300");
+          break;
+        case "blueberry":
+          setProp('--light', "#41a8f9");
+          setProp('--dark', "#064490");
+          break;
+        default:
+          setProp('--light', "#f5f5f5");
+          setProp('--dark', "#222222");
+          break;
+      }
+    }
+  </script>
+
+</html>

@@ -1,0 +1,92 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
+    background-image: url("table.png");
+    background-size: cover;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+/* if the screen is 600 or smaller */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 20px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    button {
+        width: 100px;
+        padding: 5px 0;
+    }
+}
+
+h1 {
+    color: rgb(224, 213, 50);
+    text-shadow: #FC0 1px 0 10px;
+}
+h2 {
+    color: rgb(253, 238, 105);
+    text-shadow: #FC0 1px 0 10px;
+    font-size: 45px;
+    font-style: italic;
+    font-weight: 300;
+}
+p {
+    text-shadow: rgb(251, 239, 187) 1px 0 10px;}
+
+#message_top {
+    font-style: italic;
+}
+
+/* 3. Make sure that the two buttons have some space between
+each other when they are rendered out vertically */
+button {
+    color: #016f32;
+    background: rgb(224, 213, 50);
+    width: 200px;
+    padding: 10px 0;
+    font-weight: bold;
+    border: none;
+    border-radius: 2px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    text-shadow: #04ca5d 1px 0 10px;
+    box-shadow: #c3b926 1px 0 10px;
+}
+
+/* COLUMS MAKING */
+.wrapper {
+    margin: 30px auto;
+    /* border: #2fff8d 3px solid; */
+    
+}
+.column_container {
+    /* border: #2fff8d 3px solid; */
+    display: flex;
+
+    /* width: 80%; */
+    margin: 0 auto;
+}
+.column1 {
+    margin: auto;
+
+}
+.column2 {
+    margin: auto;
+}
+
+/* ---------
+ Personalized scroll bar :p 
+ ---------- */
+body::-webkit-scrollbar {
+    width: 7px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #b2ff5a;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #0eb80e;
+}

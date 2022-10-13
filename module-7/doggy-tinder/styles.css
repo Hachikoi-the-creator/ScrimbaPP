@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+/* General */
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body {
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  background: rgb(255, 102, 102);
+  background: radial-gradient(
+    circle,
+    rgba(255, 102, 102, 1) 0%,
+    rgba(251, 165, 248, 1) 100%
+  );
+}
+
+.main {
+  padding: 0 10px;
+}
+
+.container {
+  margin: 30px 13px;
+  max-width: 400px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #ffffff 0%, #f6f7fb 100%);
+}
+
+@media (min-width: 450px) {
+  .container {
+    width: 70%;
+    margin: 30px auto;
+  }
+}
+
+/*************
+  UTLITIES 
+ ************/
+.flex-row {
+  display: flex;
+  align-items: center;
+}
+
+/*************
+  NAV
+ ************/
+.nav {
+  justify-content: space-between;
+  padding: 6px;
+}
+
+.nav img {
+  width: 25px;
+}
+
+.nav button:nth-child(2) {
+  width: 60px;
+}
+
+.nav button:nth-child(2) img {
+  width: 100%;
+}
+
+.nav button {
+  padding: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/*************
+  IMG 
+ ************/
+.main img {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.img-container {
+  position: relative;
+  padding: 7px;
+  min-height: 400px;
+  min-width: 300px;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.9) -11.44%,
+      rgba(0, 0, 0, 0) 39.97%
+    ),
+    url("./img/dogs/doggo1.jpg");
+
+  background-position: center;
+  background-size: cover;
+  /* background-repeat: no-repeat; */
+  border-radius: 10px;
+}
+
+.img-container p {
+  color: #f6f7fb;
+}
+
+.img-name {
+  font-size: 28px;
+  font-weight: 600;
+  padding-top: 90%;
+}
+
+.img-intro {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.img-container .yes-img,
+.img-container .nope-img {
+  position: absolute;
+  top: 50px;
+  width: 180px;
+  transform: rotate(-0.1turn);
+  display: none;
+  /* Default is: display:inline; */
+}
+/* .yes-img {
+  display: none;
+} */
+/* .nope-img {
+  display: none;
+} */
+
+/*************
+  SELECT BTNS
+ ************/
+.select-btns .flex-row {
+  justify-content: space-between;
+}
+
+.select-btns button {
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  background-color: #fefefe;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  box-shadow: 0px 3px 11px rgb(136, 136, 136), 0px 0px 4px rgb(92, 92, 92);
+}
+
+.select-btns {
+  max-width: 230px;
+  margin: 0 auto;
+  padding: 7px 0;
+}
+
+.select-btns img {
+  width: 28px;
+  height: 29px;
+}
+
+.nope-btn:hover,
+.nope-btn:active {
+  background-color: rgba(255, 231, 239, 1);
+}
+.yes-btn:hover,
+.yes-btn:active {
+  background-color: rgba(219, 255, 244, 1);
+}

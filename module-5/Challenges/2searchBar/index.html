@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/8koi-svg.svg" />
+    <title>Search These</title>
+  </head>
+  <style>
+    *,
+    ::after,
+    ::before {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --black: #252525;
+      --red: #ff969682;
+      /* --hover-green: rgb(2, 114, 2); */
+      --white: #fefefe;
+    }
+
+    #search {
+      border-radius: 13px 13px 0 0;
+    }
+
+    #results {
+      border-radius: 0 0 13px 13px;
+    }
+
+    body {
+      width: 100%;
+      height: 100vh;
+      padding-top: 35px;
+      background-color: var(--black);
+    }
+
+    #container {
+      border-radius: 13px;
+
+      width: 600px;
+      margin: 0 auto;
+      margin-top: 20px;
+      background-color: rgb(201, 215, 255);
+    }
+
+    #search {
+      display: flex;
+      padding: 20px;
+      background-color: rgb(0, 134, 109);
+    }
+
+    #search label {
+      font-size: 24px;
+      font-weight: bold;
+      margin-right: 15px;
+    }
+
+    #results {
+      display: block;
+      padding: 10px;
+    }
+
+    #results .name {
+      width: 100%;
+      padding: 10px 0;
+      text-align: center;
+      height: 100%;
+      background-color: var(--red);
+      margin-bottom: 10px;
+      list-style-type: none;
+    }
+  </style>
+
+  <body>
+    <div id="container">
+      <div id="search">
+        <label for="searchInput">Search Users</label>
+        <input id="searchInput" type="text">
+      </div>
+
+      <ul id="results">
+        <li class="name">Karl</li>
+        <li class="name">Per</li>
+        <li class="name">Katie</li>
+        <li class="name">Lupe</li>
+        <li class="name">Katherine</li>
+        <li class="name">Kelly</li>
+        <li class="name">Kurt</li>
+        <li class="name">Fred</li>
+      </ul>
+
+    </div>
+  </body>
+
+  <script src="app.js"></script>
+
+</html>

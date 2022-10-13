@@ -1,0 +1,36 @@
+.carousel {
+  position: relative;
+  width: 90%;
+  max-width: 600px;
+}
+
+.carousel div {
+  display: none;
+}
+
+.carousel img {
+  width: 100%;
+}
+
+.carousel .visible {
+  display: block;
+}
+
+/* Travel Buttons */
+.carousel--actions {
+  position: absolute;
+  top: 125px;
+}
+
+.carousel--actions button {
+  width: 40px;
+  aspect-ratio: 1/1;
+  padding: 10px;
+  font-weight: 900;
+  border-radius: 50px;
+}
+
+.carousel--actions button:nth-child(2) {
+  position: relative;
+  left: 515px;
+}
