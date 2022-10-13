@@ -1,5 +1,9 @@
-import "./style.css";
-import { M2Projects, M5Projects, M6Projects, M7Projects } from "./projectsData";
+import {
+  M2Projects,
+  M5Projects,
+  M6Projects,
+  M7Projects,
+} from "./projectsData.js";
 
 function getModuleHtml(dataArr = []) {
   let moduleHTML = "";
