@@ -68,6 +68,12 @@ const M5Projects = [
     images: ["img/thumbnails/module5-twimba.png"],
     url: "module-5/twimba/index.html",
   },
+  {
+    id: 56,
+    name: "Oredering App",
+    images: ["img/thumbnails/module5-ordering-app.png"],
+    url: "module-5/OrderingApp/index.html",
+  },
 ];
 
 const M6Projects = [
