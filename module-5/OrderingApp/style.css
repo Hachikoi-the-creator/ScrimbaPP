@@ -11,6 +11,8 @@
 
 :root {
   font-size: 62.5%;
+  --btn-bg: rgba(22, 219, 153, 1);
+  --btn-hover: rgb(2, 162, 109);
 }
 
 img {
@@ -118,6 +120,10 @@ h2 {
   border-radius: 50%;
 }
 
+.items--item .add-item::selection {
+  background-color: transparent;
+}
+
 /*******
   Total 
 ******/
@@ -134,7 +140,7 @@ h2 {
 .total--rendering > div {
   display: flex;
   align-items: center;
-  padding: 25px 0;
+  padding-bottom: 16px;
   gap: 15px;
   font-size: 2.8rem;
 }
@@ -160,19 +166,36 @@ h2 {
 .total--btn {
   margin-top: 50px;
   width: 100%;
-  background-color: rgba(22, 219, 153, 1);
-
+  background-color: var(--btn-bg);
   font-weight: 700;
   padding: 22px 0;
+}
+
+.total--btn:hover,
+.total--btn:active {
+  background-color: var(--btn-hover);
+}
+
+/* After purchase modification */
+.total--btn.morph {
+  background-color: #cbffe7;
+  color: #065f46;
+  padding: 20px;
+}
+
+.total--btn.morph:hover,
+.total--btn.morph:active {
+  background-color: #cbffe7;
+  color: #065f46;
+  cursor: default;
 }
 
 /*******
   FORM 
 ******/
 .modal-container {
-  /* display: none; */
-  /* display: flex; */
-  /* justify-content: center; */
+  display: none;
+  justify-content: center;
   position: fixed;
   top: 0;
   width: 100vw;
@@ -181,7 +204,7 @@ h2 {
 }
 
 .form {
-  max-width: 525px;
+  width: 75%;
   margin: 100px auto;
   display: flex;
   gap: 23px;
@@ -199,6 +222,7 @@ h2 {
 
 @media (max-width: 500px) {
   .form {
+    max-width: 525px;
     margin: 100px 35px;
   }
 }
@@ -207,13 +231,51 @@ h2 {
   padding: 15px;
   width: 100%;
   height: 52px;
+  border-radius: 3px;
 }
 
 .form button {
-  height: 52;
   padding: 15px;
-  background-color: rgba(22, 219, 153, 1);
+  background-color: var(--btn-bg);
   color: #fff;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 700;
+  transition: 50ms ease-in-out;
+}
+
+.form button:active,
+.form button:hover {
+  background-color: var(--btn-hover);
+}
+
+.form input.invalid {
+  border: 1px solid rgba(255, 0, 0, 0.789);
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  /* from csstricks */
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }

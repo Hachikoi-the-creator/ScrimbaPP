@@ -36,10 +36,8 @@ document.addEventListener("click", (e) => {
   } else if (e.target.dataset.stout) {
     handleRemove("stout");
   } else if (e.target.dataset.buyIt) {
-    console.log("PRESSING", document.querySelector(".modal-container"));
-    document.querySelector(".modal-container").display = "flex";
+    document.querySelector(".modal-container").style.display = "flex";
   } else if (e.target.dataset.modalBtn) {
-    console.log("modal btn");
     handleModal();
   } else {
     console.log("Outside click unu");
@@ -92,7 +90,6 @@ function handleAddClick(beerName = "") {
       break;
   }
   console.log("Total is: ", total);
-  // renderPriceChange();
 
   // Update total
   document.getElementById("total-span").textContent = `$${total}`;
@@ -123,7 +120,6 @@ function renderNewItems() {
 }
 
 function handleRemove(beerName = "") {
-  // console.log(productsToBuy[beerName]);
   total -= productsToBuy[beerName].amount * productsToBuy[beerName].price;
   productsToBuy[beerName].amount = 0;
   // Update total
@@ -132,21 +128,61 @@ function handleRemove(beerName = "") {
 }
 
 function handleModal() {
+  const name = document.getElementById("name");
   const cardNum = document.getElementById("cardNum");
   const cvv = document.getElementById("cvv");
-  const name = document.getElementById("name");
-  console.log("TF?", cardNum, cvv, name);
-  if (
-    cardNum.value.lenght >= 10 &&
-    cvv.value.lenght === 3 &&
-    name.value.lenght >= 3
-  ) {
-    // valid enough data
-    console.log("valid enough data");
-    // reset inputs
-    cardNum.value = "";
-    cvv.value = "";
-    name.value = "";
-    document.querySelector(".modal-container").display = "none";
+
+  name.classList.remove("invalid");
+  cardNum.classList.remove("invalid");
+  cvv.classList.remove("invalid");
+
+  const validName = name.value.length > 2;
+  const validCardNum = cardNum.value.length > 10;
+  const validCvv = cvv.value.length === 3;
+
+  if (!validName) {
+    console.log("invalid name");
+    name.classList.add("invalid");
   }
+  if (!validCardNum) {
+    console.log("invalid card number");
+    cardNum.classList.add("invalid");
+  }
+  if (!validCvv) {
+    console.log("Invalid cvv");
+    cvv.classList.add("invalid");
+  }
+  if (validName && validCardNum && validCvv) {
+    resetFormInputs(name, cardNum, cvv);
+    // hidde modal
+    document.querySelector(".modal-container").style.display = "none";
+    modifyBuyBtn();
+    removeAllCartItems();
+  }
+}
+
+function resetFormInputs(formName, formCardNum, formCvv) {
+  console.log("valid enough data");
+  formName.value = "";
+  formCardNum.value = "";
+  formCvv.value = "";
+}
+
+function removeAllCartItems() {
+  for (const key in productsToBuy) {
+    // if a has b, call a.b
+    if (
+      Object.hasOwnProperty.call(productsToBuy, key) &&
+      productsToBuy[key].amount
+    ) {
+      // removes item and renders changes
+      handleRemove(productsToBuy[key].name.toLowerCase());
+    }
+  }
+}
+
+function modifyBuyBtn() {
+  const morphBtn = document.querySelector(".total--btn");
+  morphBtn.textContent = "Thank you for your patronage!";
+  morphBtn.classList.add("morph");
 }
