@@ -1,23 +1,40 @@
+// Dock,Doppelbock,Stout
 export default [
   {
-    name: "Black Beer",
-    ingredients: ["pepperoni", "mushrom", "mozarella"],
     id: 0,
-    price: 14,
+    name: "Dock",
+    ingredients: [
+      "Weyermann Munich I",
+      "Weyermann Vienna Malt",
+      "Crisp Chocolate Malt",
+    ],
+    price: 24,
     emoji: "🍕",
+    url: "img/bock-beer.png",
   },
   {
-    name: "Hamburger",
-    ingredients: ["beef", "cheese", "lettuce"],
-    price: 12,
-    emoji: "🍔",
     id: 1,
+    name: "Doppelbock",
+    ingredients: [
+      "Bavarian Lager Yeast ",
+      "Corn Sugar",
+      "lettuceWeyermann Caramunich® I",
+    ],
+    price: 22,
+    emoji: "🍔",
+    url: "img/doppelbock-beer.png",
   },
   {
-    name: "Beer",
-    ingredients: ["grain, hops, yeast, water"],
-    price: 12,
-    emoji: "🍺",
     id: 2,
+    name: "Stout",
+    ingredients: [
+      "Chocolate malt",
+      "Roasted barley",
+      "Pale malt",
+      "Oat, flaked",
+    ],
+    price: 26,
+    emoji: "🍺",
+    url: "img/stout-beer.png",
   },
 ];

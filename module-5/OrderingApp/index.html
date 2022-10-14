@@ -7,10 +7,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="../../public/8koi-svg.svg" />
     <title>Biir INC.</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./js/app.js" type="module" defer></script>
   </head>
 
-  <body>
+  <body class="body">
+    <div class="container">
+      <header class="header">
+        <h1>Jhonny's Taberns</h1>
+        <h2>German beer is the best in the worrrld!</h2>
+      </header>
+      <main>
+        <div class="items"></div>
+        <div class="total">
+          <h3>Your Order</h3>
+          <div class="total--rendering"></div>
+          <p class="total--p">Total <span id="total-span">$0</span></p>
+          <button class="total--btn" data-buy-it="uwu">Complete Order</button>
+        </div>
+      </main>
+    </div>
+    <div class="modal-container">
+      <form class="form">
+        <input type="text" placeholder="Enter your name" id="name">
 
+        <input type="text" placeholder="Card number pls" id="cardNum">
+
+        <input type="text" placeholder="Enter CVV" id="cvv">
+
+        <button data-modal-btn="bruh" type="button">Pay</button>
+      </form>
+    </div>
   </body>
 
 </html>
